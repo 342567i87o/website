@@ -1,0 +1,7 @@
+{
+  "name": "Polarity Final",
+  "description": "A high-end AI-powered game creation studio that generates Godot-compatible assets, scripts, and levels from natural language descriptions.",
+  "requestFramePermissions": [
+    "microphone"
+  ]
+}
