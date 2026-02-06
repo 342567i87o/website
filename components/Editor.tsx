@@ -411,9 +411,13 @@ const Editor: React.FC<EditorProps> = ({ game, onBack, theme, onUpdateGame }) =>
               />
             ) : (
               <div ref={viewportRef} className={`flex-1 relative flex items-center justify-center overflow-hidden ${isAnnotating ? 'ring-2 ring-blue-500 ring-inset' : ''}`}>
-                <div className="w-56 h-56 border border-blue-500/30 bg-blue-500/5 rounded-2xl animate-pulse flex items-center justify-center text-blue-500 font-black text-[10px] uppercase tracking-[0.2em] shadow-2xl">
-                  {mainTab} VIEWPORT ACTIVE
-                </div>
+             {/* Godot Editor Iframe */}
+               <iframe
+                 src="/godot/godot.editor.html"
+                 className="w-full h-full border-0"
+                 sandbox="allow-same-origin allow-scripts allow-modals allow-storage-access-by-user-activation allow-top-navigation allow-popups allow-forms allow-downloads"
+                 title="Godot Web Editor"
+               />
 
                 {/* Annotation Overlay */}
                 <canvas 
